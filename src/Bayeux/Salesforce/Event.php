@@ -20,7 +20,7 @@ class Event
 {
     /**
      * @var \DateTimeImmutable
-     * @JMS\Type("DateTimeImmutable<'Y-m-d\TH:i:s.u\Z', 'GMT'>")
+     * @JMS\Type("string")
      */
     private $createdDate;
 
@@ -37,19 +37,19 @@ class Event
     private $type;
 
     /**
-     * @return \DateTimeImmutable
+     * @return string
      */
-    public function getCreatedDate(): \DateTimeImmutable
+    public function getCreatedDate(): ?string
     {
         return $this->createdDate;
     }
 
     /**
-     * @param \DateTimeImmutable $createdDate
+     * @param string $createdDate
      *
      * @return Event
      */
-    public function setCreatedDate(\DateTimeImmutable $createdDate): Event
+    public function setCreatedDate(?string $createdDate): Event
     {
         $this->createdDate = $createdDate;
 
